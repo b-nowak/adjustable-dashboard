@@ -1,0 +1,33 @@
+@mixin flex($jc, $ai, $fd) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+  }
+  
+  @mixin screenUp($size) {
+    $lg: "(min-width: 1200px)";
+    $md: "(min-width: 992px)";
+    $sm: "(min-width: 768px)";
+    $xs: "(min-width: 480px)";
+    @if $size==lg {
+      @media only screen and #{$lg} {
+        @content;
+      }
+    }
+    @else if $size==md {
+      @media only screen and #{$md} {
+        @content;
+      }
+    }
+    @else if $size==sm {
+      @media only screen and #{$sm} {
+        @content;
+      }
+    }
+    @else if $size==xs {
+      @media only screen and #{$xs} {
+        @content;
+      }
+    }
+  }

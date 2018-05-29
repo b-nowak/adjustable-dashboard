@@ -1,0 +1,71 @@
+@import '_mixins';
+%full-height {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+html {
+  @extend %full-height;
+  @include flex(flex-start, stretch, row);
+  body {
+    @extend %full-height;
+    height: 100%;
+    .grid-container {
+      @extend %full-height;
+      @include flex(center, center, column);
+      .navbar {
+        width: 100%;
+        order: 1;
+        .nav {
+          a {
+            color: white;
+          }
+        }
+      }
+      .vertical-split {
+        @extend %full-height;
+        @include flex(cener, center, column);
+        order: 2;
+        @include screenUp(md) {
+          @include flex(flex-start, stretch, row);
+        }
+        .side {
+          @extend %full-height;
+          @include flex(flex-start, stretch, row);
+          &.left {
+            .jumbotron {
+              width: 100%;
+              margin: 0;
+              padding: 3rem 1.5rem;
+              background-position: center;
+              overflow-y: scroll;
+            }
+          }
+          &.right {
+            .content-area {
+              margin: 0;
+              @extend %full-height;
+              @include flex(flex-start, center, column);
+              .content-wrap {
+                overflow-y: scroll;
+                order: 2;
+                width: 100%;
+                padding: 3rem 1.5rem;
+              }
+              .navbar {
+                width: 100%;
+                order: 1;
+                .nav {
+                  a {
+                    color: white;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
