@@ -180,4 +180,9 @@ html body .customiser .customiser-wrap .customiser-toggle {
   padding: 8px;
 }
 
+/* line 116, /Users/bnowak/Desktop/da/scss/polcode.scss */
+html body .customiser .customiser-wrap .customiser-toggle i {
+  color: rgba(96, 131, 218, 0.9);
+}
+
 /*# sourceMappingURL=../css/polcode.map */

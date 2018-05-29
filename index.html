@@ -171,7 +171,7 @@
     <div class="customiser" v-bind:class="{'is-toggled': isToggled}">
       <div class="customiser-wrap">
         <a class="customiser-toggle" v-on:click="isToggled = !isToggled">
-          <i class="fas fa-cog fa-spin text-primary"></i>
+          <i class="fas fa-cog fa-spin" :style="{ 'color': color }"></i>
         </a>
         <div class="customiser-head mb-4">
           <h4>Customise theme</h4>
