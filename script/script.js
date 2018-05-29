@@ -8,6 +8,7 @@ var app = new Vue({
     isChangedSecondary: false,
     isHiddenSecondary: true,
     isHiddenFooter: true,
+    color: ''
   },
   methods: {}
 })

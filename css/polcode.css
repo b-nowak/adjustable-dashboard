@@ -35,7 +35,7 @@ html body .grid-container {
 /* line 19, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .navbar {
   width: 100%;
-  background: #4160ae;
+  background-color: #4160ae;
 }
 
 /* line 23, /Users/bnowak/Desktop/da/scss/polcode.scss */
@@ -90,7 +90,7 @@ html body .grid-container .vertical-split .side.left .jumbotron {
 
 /* line 51, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side.left .jumbotron .jumbotron-overlay {
-  background: rgba(96, 131, 218, 0.9);
+  background-color: rgba(96, 131, 218, 0.9);
   background-attachment: fixed;
 }
 
@@ -124,7 +124,7 @@ html body .grid-container .vertical-split .side.right .content-area .content-wra
 /* line 73, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side.right .content-area .navbar {
   width: 100%;
-  background: #4f70c3;
+  background-color: #4f70c3;
 }
 
 /* line 77, /Users/bnowak/Desktop/da/scss/polcode.scss */
@@ -135,7 +135,7 @@ html body .grid-container .vertical-split .side.right .content-area .navbar .nav
 /* line 86, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container footer {
   order: 4;
-  background: #3b5aa7;
+  background-color: #3b5aa7;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -152,7 +152,7 @@ html body .customiser {
   right: -250px;
   top: 112px;
   width: 250px;
-  background: #eee;
+  background-color: #eee;
 }
 
 /* line 102, /Users/bnowak/Desktop/da/scss/polcode.scss */
@@ -175,7 +175,7 @@ html body .customiser .customiser-wrap .customiser-toggle {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background: #000;
+  background-color: #000;
   color: 000;
   padding: 8px;
 }
