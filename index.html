@@ -10,9 +10,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap4-harbor.min.css">
+  <link rel="stylesheet" href="css/bootstrap4.min.css">
   <link rel="stylesheet" href="css/polcode.css">
-
   <!-- development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
@@ -50,7 +49,8 @@
             <div class="container">
               <div class="container-padding">
                 <h1 class="display-1 text-light">Key Visual</h1>
-                <span class="lead">This is the Key Visual description that is customisable and RWD&nbsp;-&nbsp;ready.</span>
+                <p class="lead text-justify">This is the Key Visual description that is customisable and RWD&nbsp;-&nbsp;ready.</p>
+                <p class="small text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sapiente dolor ut consequatur rerum velit temporibus fugiat, perspiciatis omnis provident, consectetur quam voluptates officiis quasi repellat quod qui. Vero, natus est sapiente dolor ut consequatur rerum velit temporibus fugiat? </p>
                 <div class="mt-4">
                   <a href="#!" class="btn btn-success btn-pill btn-wide btn-lg my-2 mr-2">
                     <span>A Button</span>
@@ -209,10 +209,8 @@
                 Red</button>
               <button href="#" class="btn btn-sm text-white" style="background-color:rgba(35, 207, 78, 0.9)" v-on:click="color = 'rgba(73, 170, 98, 0.9)'">
                 Green</button>
-
               <button href="#" class="btn btn-sm text-white" style="background-color:rgba(255, 186, 64, 0.9)" v-on:click="color = 'rgba(255, 186, 64, 0.9)'">
                 Yellow</button>
-
               <button href="#" class="btn btn-sm text-white mt-1" style="background-color:rgba(73, 132, 243, 0.9)" v-on:click="color = ''">
                 Blue</button>
             </li>
@@ -223,16 +221,12 @@
     <footer v-bind:class="{'d-none': isHiddenFooter}" :style="{ 'background-color': color }">I'm a footer 2018</footer>
   </div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-
 
   <script src="script/script.js"></script>
 </body>
