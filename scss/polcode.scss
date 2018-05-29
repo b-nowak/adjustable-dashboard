@@ -1,8 +1,10 @@
 @import '_mixins';
 %full-height {
-  height: 100%;
   width: 100%;
-  overflow: hidden;
+  @include screenUp(md) {
+    overflow: hidden;
+    height: 100%;
+  }
 }
 
 html {
@@ -24,7 +26,7 @@ html {
       }
       .vertical-split {
         @extend %full-height;
-        @include flex(cener, center, column);
+        @include flex(center, center, column);
         order: 2;
         @include screenUp(md) {
           @include flex(flex-start, stretch, row);
@@ -38,7 +40,11 @@ html {
               margin: 0;
               padding: 3rem 1.5rem;
               background-position: center;
-              overflow-y: auto;
+              background-repeat: no-repeat;
+              background-size: cover;
+              @include screenUp(md) {
+                overflow-y: auto;
+              }
             }
           }
           &.right {
@@ -47,9 +53,11 @@ html {
               @extend %full-height;
               @include flex(flex-start, center, column);
               .content-wrap {
-                overflow-y: auto;
                 width: 100%;
                 padding: 3rem 1.5rem;
+                @include screenUp(md) {
+                  overflow-y: auto;
+                }
               }
               .navbar {
                 width: 100%;
@@ -73,13 +81,28 @@ html {
       }
     }
     .customiser {
-      position: absolute;
+      position: fixed;
       z-index: 99999;
-      right: 0;
-      top: 200px;
-      width: 300px;
-      padding: 20px;
+      right: -250px;
+      top: 112px;
+      width: 250px;
       background: #eee;
+      &.is-toggled {
+        right: 0;
+      }
+      .customiser-wrap {
+        padding: 20px;
+        position: relative;
+        .customiser-toggle {
+          position: absolute;
+          top: 0;
+          left: -32px;
+          @include flex(center, center, row);
+          background: #000;
+          color: 000;
+          padding: 8px;
+        }
+      }
     }
   }
 }

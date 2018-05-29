@@ -5,10 +5,10 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Harbor - Bootstrap 4 Theme</title>
+  <title>Data Aggregator</title>
 
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap4-harbor.min.css">
   <link rel="stylesheet" href="css/polcode.css">
@@ -20,13 +20,12 @@
 
 <body>
   <div class="grid-container" id="pc-data-aggregator">
-    <nav class="navbar navbar-expand-lg ht-tm-element navbar-dark bg-primary" v-bind:class="{'order-3': isChangedPrimary, 'd-none': isHiddenPrimary}">
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-primary" v-bind:class="{'order-3': isChangedPrimary, 'd-none': isHiddenPrimary}">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo04"
         aria-controls="navbarTogglerDemo04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#!">Navbar</a>
-
+      <a class="navbar-brand" href="#!">Company Logo</a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo04">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <li class="nav-item active">
@@ -41,24 +40,18 @@
             <a class="nav-link disabled" href="#!">Disabled</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" placeholder="Search" type="text">
-        </form>
       </div>
     </nav>
-
     <div class="vertical-split">
       <div class="side left">
-        <div class="jumbotron bg-info text-white radius-0" style="background:url(images/bg-harbor.jpg)">
+        <div class="jumbotron bg-info text-white radius-0" style="background-image:url(images/bg-harbor.jpg)">
           <div class="container">
-            <h1 class="display-1 text-light">Harbor</h1>
-            <span class="lead">This is a starter template with a jumbotron</span>
-
+            <h1 class="display-1 text-light">Key Visual</h1>
+            <span class="lead">This is the Key Visual description that is customisable and RWD&nbsp;-&nbsp;ready.</span>
             <div class="mt-4">
               <a href="#!" class="btn btn-success btn-pill btn-wide btn-lg my-2 mr-2">
                 <span>A Button</span>
               </a>
-
               <a href="#!" class="btn btn-primary btn-pill btn-wide btn-lg my-2">
                 <span>Another Button</span>
               </a>
@@ -68,14 +61,12 @@
       </div>
       <div class="side right">
         <div class="content-area">
-
-          <nav class="navbar navbar-expand-lg ht-tm-element navbar-dark bg-success" v-bind:class="{'order-2': isChangedSecondary, 'd-none': isHiddenSecondary}">
+          <nav class="navbar navbar-expand-lg  navbar-dark bg-success" v-bind:class="{'order-2': isChangedSecondary, 'd-none': isHiddenSecondary}">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
               aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#!">Navbar</a>
-
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
               <ul class="navbar-nav mr-auto mt-2 mt-md-0">
                 <li class="nav-item active">
@@ -90,71 +81,71 @@
                   <a class="nav-link disabled" href="#!">Disabled</a>
                 </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" placeholder="Search" type="text">
-              </form>
             </div>
           </nav>
-
           <div class="content-wrap">
             <div class="container">
               <div class="row">
                 <div class="col-xl-12">
-                  <div class="ht-tm-codeblock">
-                    <h5 class="ht-tm-cat-title">Typography</h5>
-                    <h1 class="display-1 ht-tm-element">Display 1</h1>
-                    <h1 class="display-2 ht-tm-element">Display 2</h1>
-                    <h1 class="display-3 ht-tm-element">Display 3</h1>
-                    <h1 class="display-4 ht-tm-element">Display 4</h1>
-                  </div>
-                  <div class="ht-tm-codeblock">
-                    <div class="ht-tm-element ht-tm-element-inner">
-                      <h1>h1. Bootstrap heading</h1>
+                  <h1>Right side text content</h1>
+                  <h5 class=" mt-5">Form</h5>
+                  <hr>
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
-                    <div class="ht-tm-element ht-tm-element-inner">
-                      <h2>h2. Bootstrap heading</h2>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
-                    <div class="ht-tm-element ht-tm-element-inner">
-                      <h3>h3. Bootstrap heading</h3>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
-                    <div class="ht-tm-element ht-tm-element-inner">
-                      <h4>h4. Bootstrap heading</h4>
+                    <div class="d-flex align-items-center justify-content-end">
+                      <button type="submit" class="btn btn-success btn-pill mt-3 btn-wide btn-lg">Submit</button>
                     </div>
-                    <div class="ht-tm-element ht-tm-element-inner">
-                      <h5>h5. Bootstrap heading</h5>
-                    </div>
-                    <div class="ht-tm-element ht-tm-element-inner">
-                      <h6>h6. Bootstrap heading</h6>
-                    </div>
-                  </div>
-                  <div class="ht-tm-codeblock">
-                    <p class="lead ht-tm-element">
-                      Lead Text - Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-                    </p>
-                  </div>
-                  <div class="ht-tm-codeblock">
-                    <div class="ht-tm-element ht-tm-element-inner">
-                      <h6>Body text </h6>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, cumque delectus deleniti dolor esse ex
-                        fugiat, id in ipsum modi molestiae mollitia, nulla numquam provident quasi soluta sunt tempora vel.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aspernatur consequuntur cumque
-                        dolor ducimus earum eos, expedita, fuga harum incidunt maxime modi mollitia numquam praesentium sapiente
-                        suscipit temporibus ut vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nam nostrum
-                        pariatur praesentium tempore. Ad architecto at aut dicta enim, eveniet expedita libero magnam minus,
-                        nihil, non sequi sunt voluptates!</p>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="col-xl-6">
-                  <div class="ht-tm-codeblock">
-                    <blockquote class="blockquote ht-tm-element">
-                      <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                    </blockquote>
-                  </div>
+                  </form>
+
+
+                  <h5 class="mt-5">Typography</h5>
+                  <hr>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sapiente dolor ut consequatur rerum velit temporibus fugiat,
+                    perspiciatis omnis provident, consectetur quam voluptates officiis quasi repellat quod qui. Vero, natus?
+                  </p>
+                  <h1>h1. Bootstrap heading</h1>
+                  <h2>h2. Bootstrap heading</h2>
+                  <h3>h3. Bootstrap heading</h3>
+                  <h4>h4. Bootstrap heading</h4>
+                  <h5>h5. Bootstrap heading</h5>
+                  <h6>h6. Bootstrap heading</h6>
+                  <h1 class="display-1">Display 1</h1>
+                  <h1 class="display-2">Display 2</h1>
+                  <h1 class="display-3">Display 3</h1>
+                  <h1 class="display-4">Display 4</h1>
+                  <p class="lead">
+                    Lead Text - Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+                  </p>
+                  <h6>Body text </h6>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, cumque delectus deleniti dolor esse ex fugiat,
+                    id in ipsum modi molestiae mollitia, nulla numquam provident quasi soluta sunt tempora vel. Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit. Accusamus, aspernatur consequuntur cumque dolor ducimus
+                    earum eos, expedita, fuga harum incidunt maxime modi mollitia numquam praesentium sapiente suscipit temporibus
+                    ut vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nam nostrum pariatur praesentium
+                    tempore. Ad architecto at aut dicta enim, eveniet expedita libero magnam minus, nihil, non sequi sunt
+                    voluptates!</p>
                 </div>
                 <div class="col-xl-6">
-                  <blockquote class="blockquote blockquote-reverse ht-tm-element">
+                  <blockquote class="blockquote ">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                  </blockquote>
+                </div>
+                <div class="col-xl-6">
+                  <blockquote class="blockquote blockquote-reverse">
                     <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer class="blockquote-footer">Someone famous in
                       <cite title="Source Title">Source Title</cite>
@@ -164,56 +155,50 @@
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
     </div>
     <!-- customizer -->
-    <div class="customiser">
-      <div class="customiser-head mb-4">
-        <h3>Customise theme</h3>
-      </div>
-      <div class="customiser-body">
-        <ul class="list-unstyled">
-
-          <li>
-            <h6>Primary header</h6>
-            <hr class="my-2">
-            <button href="#" class="btn btn-success btn-sm" v-on:click="changePrimaryHeaderPosition" v-bind:class="{'disabled': isHiddenPrimary}"
-              :disabled="isHiddenPrimary">
-              Swap position</button>
-
-            <button href="#" class="btn btn-danger btn-sm" v-on:click="hidePrimaryHeader">
-              Hide</button>
-          </li>
-
-          <li class="mt-2">
-            <h6>Secondary header</h6>
-            <hr class="my-2">
-            <button href="#" class="btn btn-success btn-sm" v-on:click="changeSecondaryHeaderPosition" v-bind:class="{'disabled': isHiddenSecondary}"
-              :disabled="isHiddenSecondary">
-              Swap position</button>
-
-            <button href="#" class="btn btn-danger btn-sm" v-on:click="hideSecondaryHeader">
-              Hide</button>
-          </li>
-
-          <li class="mt-2">
-            <h6>Footer</h6>
-            <hr class="my-2">
-            <button href="#" class="btn btn-danger btn-sm" v-on:click="hideFooter">
-              Hide</button>
-          </li>
-        </ul>
+    <div class="customiser" v-bind:class="{'is-toggled': isToggled}">
+      <div class="customiser-wrap">
+        <a class="customiser-toggle" v-on:click="isToggled = !isToggled">
+          <i class="fas fa-cog fa-spin text-primary"></i>
+        </a>
+        <div class="customiser-head mb-4">
+          <h4>Customise theme</h4>
+        </div>
+        <div class="customiser-body">
+          <ul class="list-unstyled">
+            <li>
+              <h6>Primary header</h6>
+              <hr class="my-2">
+              <button href="#" class="btn btn-warning btn-sm" v-on:click="isHiddenPrimary = !isHiddenPrimary">
+                Show/Hide</button>
+              <button href="#" class="btn btn-success btn-sm" v-on:click="isChangedPrimary = !isChangedPrimary" v-bind:class="{'disabled': isHiddenPrimary}"
+                :disabled="isHiddenPrimary">
+                Swap position</button>
+            </li>
+            <li class="mt-3">
+              <h6>Secondary header</h6>
+              <hr class="my-2">
+              <button href="#" class="btn btn-warning btn-sm" v-on:click="isHiddenSecondary = !isHiddenSecondary">
+                Show/Hide</button>
+              <button href="#" class="btn btn-success btn-sm" v-on:click="isChangedSecondary = !isChangedSecondary" v-bind:class="{'disabled': isHiddenSecondary}"
+                :disabled="isHiddenSecondary">
+                Swap position</button>
+            </li>
+            <li class="mt-3">
+              <h6>Footer</h6>
+              <hr class="my-2">
+              <button href="#" class="btn btn-warning btn-sm" v-on:click="isHiddenFooter = !isHiddenFooter">
+                Show/Hide</button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-    <footer v-bind:class="{'d-none': isHiddenFooter}">asdasd</footer>
+    <footer v-bind:class="{'d-none': isHiddenFooter}">I'm a footer 2018</footer>
   </div>
-
-
-
-
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
