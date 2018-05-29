@@ -13,19 +13,21 @@
   <link rel="stylesheet" href="css/bootstrap4-harbor.min.css">
   <link rel="stylesheet" href="css/polcode.css">
 
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 </head>
 
 <body>
-  <div class="grid-container">
-
-    <nav class="navbar navbar-expand-lg ht-tm-element navbar-dark bg-primary">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="grid-container" id="pc-data-aggregator">
+    <nav class="navbar navbar-expand-lg ht-tm-element navbar-dark bg-primary" v-bind:class="{'order-3': isChangedPrimary, 'd-none': isHiddenPrimary}">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo04"
+        aria-controls="navbarTogglerDemo04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="#!">Navbar</a>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo04">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <li class="nav-item active">
             <a class="nav-link" href="#!">Home
@@ -66,9 +68,36 @@
       </div>
       <div class="side right">
         <div class="content-area">
+
+          <nav class="navbar navbar-expand-lg ht-tm-element navbar-dark bg-success" v-bind:class="{'order-2': isChangedSecondary, 'd-none': isHiddenSecondary}">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+              aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#!">Navbar</a>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#!">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#!">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#!">Disabled</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" placeholder="Search" type="text">
+              </form>
+            </div>
+          </nav>
+
           <div class="content-wrap">
             <div class="container">
-
               <div class="row">
                 <div class="col-xl-12">
                   <div class="ht-tm-codeblock">
@@ -136,37 +165,53 @@
             </div>
           </div>
 
-          <nav class="navbar navbar-expand-lg ht-tm-element navbar-dark bg-success">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-              aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#!">Navbar</a>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-              <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#!">Home
-                    <span class="sr-only">(current)</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#!">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#!">Disabled</a>
-                </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" placeholder="Search" type="text">
-              </form>
-            </div>
-          </nav>
         </div>
       </div>
     </div>
+    <!-- customizer -->
+    <div class="customiser">
+      <div class="customiser-head mb-4">
+        <h3>Customise theme</h3>
+      </div>
+      <div class="customiser-body">
+        <ul class="list-unstyled">
 
+          <li>
+            <h6>Primary header</h6>
+            <hr class="my-2">
+            <button href="#" class="btn btn-success btn-sm" v-on:click="changePrimaryHeaderPosition" v-bind:class="{'disabled': isHiddenPrimary}"
+              :disabled="isHiddenPrimary">
+              Swap position</button>
+
+            <button href="#" class="btn btn-danger btn-sm" v-on:click="hidePrimaryHeader">
+              Hide</button>
+          </li>
+
+          <li class="mt-2">
+            <h6>Secondary header</h6>
+            <hr class="my-2">
+            <button href="#" class="btn btn-success btn-sm" v-on:click="changeSecondaryHeaderPosition" v-bind:class="{'disabled': isHiddenSecondary}"
+              :disabled="isHiddenSecondary">
+              Swap position</button>
+
+            <button href="#" class="btn btn-danger btn-sm" v-on:click="hideSecondaryHeader">
+              Hide</button>
+          </li>
+
+          <li class="mt-2">
+            <h6>Footer</h6>
+            <hr class="my-2">
+            <button href="#" class="btn btn-danger btn-sm" v-on:click="hideFooter">
+              Hide</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer v-bind:class="{'d-none': isHiddenFooter}">asdasd</footer>
   </div>
+
+
 
 
 
@@ -180,6 +225,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
 
+
+  <script src="script/script.js"></script>
 </body>
 
 </html>

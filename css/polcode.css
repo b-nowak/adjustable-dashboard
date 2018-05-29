@@ -1,11 +1,11 @@
-/* line 2, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 2, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html, html body, html body .grid-container, html body .grid-container .vertical-split, html body .grid-container .vertical-split .side, html body .grid-container .vertical-split .side.right .content-area {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
-/* line 8, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 8, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html {
   display: flex;
   justify-content: flex-start;
@@ -13,12 +13,12 @@ html {
   flex-direction: row;
 }
 
-/* line 11, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 11, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body {
   height: 100%;
 }
 
-/* line 14, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 14, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container {
   display: flex;
   justify-content: center;
@@ -26,18 +26,17 @@ html body .grid-container {
   flex-direction: column;
 }
 
-/* line 17, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 17, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .navbar {
   width: 100%;
-  order: 1;
 }
 
-/* line 21, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 20, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .navbar .nav a {
   color: white;
 }
 
-/* line 26, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 25, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split {
   display: flex;
   justify-content: cener;
@@ -47,7 +46,7 @@ html body .grid-container .vertical-split {
 }
 
 @media only screen and (min-width: 992px) {
-  /* line 26, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+  /* line 25, /Users/bnowak/Desktop/da/scss/polcode.scss */
   html body .grid-container .vertical-split {
     display: flex;
     justify-content: flex-start;
@@ -56,7 +55,7 @@ html body .grid-container .vertical-split {
   }
 }
 
-/* line 33, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 32, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side {
   display: flex;
   justify-content: flex-start;
@@ -64,16 +63,16 @@ html body .grid-container .vertical-split .side {
   flex-direction: row;
 }
 
-/* line 37, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 36, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side.left .jumbotron {
   width: 100%;
   margin: 0;
   padding: 3rem 1.5rem;
   background-position: center;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
-/* line 46, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 45, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side.right .content-area {
   margin: 0;
   display: flex;
@@ -82,23 +81,45 @@ html body .grid-container .vertical-split .side.right .content-area {
   flex-direction: column;
 }
 
-/* line 50, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 49, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side.right .content-area .content-wrap {
-  overflow-y: scroll;
-  order: 2;
+  overflow-y: auto;
   width: 100%;
   padding: 3rem 1.5rem;
 }
 
-/* line 56, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 54, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side.right .content-area .navbar {
   width: 100%;
-  order: 1;
 }
 
-/* line 60, /Users/bnowak/Desktop/harbor/scss/polcode.scss */
+/* line 57, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side.right .content-area .navbar .nav a {
   color: white;
+}
+
+/* line 66, /Users/bnowak/Desktop/da/scss/polcode.scss */
+html body .grid-container footer {
+  order: 4;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 5px 0;
+}
+
+/* line 75, /Users/bnowak/Desktop/da/scss/polcode.scss */
+html body .customiser {
+  position: absolute;
+  z-index: 99999;
+  right: 0;
+  top: 200px;
+  width: 300px;
+  padding: 20px;
+  background: #eee;
 }
 
 /*# sourceMappingURL=../css/polcode.map */
