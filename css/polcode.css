@@ -1,11 +1,11 @@
 /* line 2, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html, html body, html body .grid-container, html body .grid-container .vertical-split, html body .grid-container .vertical-split .side, html body .grid-container .vertical-split .side.right .content-area {
+html, html body, html body .grid-container, html body .grid-container .vertical-split, html body .grid-container .vertical-split .side, html body .grid-container .vertical-split .side.left .jumbotron, html body .grid-container .vertical-split .side.left .jumbotron .jumbotron-overlay, html body .grid-container .vertical-split .side.right .content-area {
   width: 100%;
 }
 
 @media only screen and (min-width: 992px) {
   /* line 2, /Users/bnowak/Desktop/da/scss/polcode.scss */
-  html, html body, html body .grid-container, html body .grid-container .vertical-split, html body .grid-container .vertical-split .side, html body .grid-container .vertical-split .side.right .content-area {
+  html, html body, html body .grid-container, html body .grid-container .vertical-split, html body .grid-container .vertical-split .side, html body .grid-container .vertical-split .side.left .jumbotron, html body .grid-container .vertical-split .side.left .jumbotron .jumbotron-overlay, html body .grid-container .vertical-split .side.right .content-area {
     overflow: hidden;
     height: 100%;
   }
@@ -35,14 +35,15 @@ html body .grid-container {
 /* line 19, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .navbar {
   width: 100%;
+  background: #4160ae;
 }
 
-/* line 22, /Users/bnowak/Desktop/da/scss/polcode.scss */
+/* line 23, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .navbar .nav a {
   color: white;
 }
 
-/* line 27, /Users/bnowak/Desktop/da/scss/polcode.scss */
+/* line 28, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split {
   display: flex;
   justify-content: center;
@@ -52,7 +53,7 @@ html body .grid-container .vertical-split {
 }
 
 @media only screen and (min-width: 992px) {
-  /* line 27, /Users/bnowak/Desktop/da/scss/polcode.scss */
+  /* line 28, /Users/bnowak/Desktop/da/scss/polcode.scss */
   html body .grid-container .vertical-split {
     display: flex;
     justify-content: flex-start;
@@ -61,7 +62,7 @@ html body .grid-container .vertical-split {
   }
 }
 
-/* line 34, /Users/bnowak/Desktop/da/scss/polcode.scss */
+/* line 35, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side {
   display: flex;
   justify-content: flex-start;
@@ -69,24 +70,36 @@ html body .grid-container .vertical-split .side {
   flex-direction: row;
 }
 
-/* line 38, /Users/bnowak/Desktop/da/scss/polcode.scss */
+/* line 39, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side.left .jumbotron {
   width: 100%;
   margin: 0;
-  padding: 3rem 1.5rem;
+  padding: 0;
+  border-radius: 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 @media only screen and (min-width: 992px) {
-  /* line 38, /Users/bnowak/Desktop/da/scss/polcode.scss */
+  /* line 39, /Users/bnowak/Desktop/da/scss/polcode.scss */
   html body .grid-container .vertical-split .side.left .jumbotron {
     overflow-y: auto;
   }
 }
 
 /* line 51, /Users/bnowak/Desktop/da/scss/polcode.scss */
+html body .grid-container .vertical-split .side.left .jumbotron .jumbotron-overlay {
+  background: rgba(96, 131, 218, 0.9);
+  background-attachment: fixed;
+}
+
+/* line 55, /Users/bnowak/Desktop/da/scss/polcode.scss */
+html body .grid-container .vertical-split .side.left .jumbotron .jumbotron-overlay .container-padding {
+  padding: 3rem 1.5rem;
+}
+
+/* line 62, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side.right .content-area {
   margin: 0;
   display: flex;
@@ -95,33 +108,34 @@ html body .grid-container .vertical-split .side.right .content-area {
   flex-direction: column;
 }
 
-/* line 55, /Users/bnowak/Desktop/da/scss/polcode.scss */
+/* line 66, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side.right .content-area .content-wrap {
   width: 100%;
   padding: 3rem 1.5rem;
 }
 
 @media only screen and (min-width: 992px) {
-  /* line 55, /Users/bnowak/Desktop/da/scss/polcode.scss */
+  /* line 66, /Users/bnowak/Desktop/da/scss/polcode.scss */
   html body .grid-container .vertical-split .side.right .content-area .content-wrap {
     overflow-y: auto;
   }
 }
 
-/* line 62, /Users/bnowak/Desktop/da/scss/polcode.scss */
+/* line 73, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side.right .content-area .navbar {
   width: 100%;
+  background: #4f70c3;
 }
 
-/* line 65, /Users/bnowak/Desktop/da/scss/polcode.scss */
+/* line 77, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container .vertical-split .side.right .content-area .navbar .nav a {
   color: white;
 }
 
-/* line 74, /Users/bnowak/Desktop/da/scss/polcode.scss */
+/* line 86, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .grid-container footer {
   order: 4;
-  background: #000;
+  background: #3b5aa7;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -131,7 +145,7 @@ html body .grid-container footer {
   padding: 5px 0;
 }
 
-/* line 83, /Users/bnowak/Desktop/da/scss/polcode.scss */
+/* line 95, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .customiser {
   position: fixed;
   z-index: 99999;
@@ -141,18 +155,18 @@ html body .customiser {
   background: #eee;
 }
 
-/* line 90, /Users/bnowak/Desktop/da/scss/polcode.scss */
+/* line 102, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .customiser.is-toggled {
   right: 0;
 }
 
-/* line 93, /Users/bnowak/Desktop/da/scss/polcode.scss */
+/* line 105, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .customiser .customiser-wrap {
   padding: 20px;
   position: relative;
 }
 
-/* line 96, /Users/bnowak/Desktop/da/scss/polcode.scss */
+/* line 108, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html body .customiser .customiser-wrap .customiser-toggle {
   position: absolute;
   top: 0;

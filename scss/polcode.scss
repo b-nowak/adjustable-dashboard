@@ -18,6 +18,7 @@ html {
       @include flex(center, center, column);
       .navbar {
         width: 100%;
+        background: #4160ae;
         .nav {
           a {
             color: white;
@@ -38,12 +39,22 @@ html {
             .jumbotron {
               width: 100%;
               margin: 0;
-              padding: 3rem 1.5rem;
+              padding: 0;
+              border-radius: 0;
               background-position: center;
               background-repeat: no-repeat;
               background-size: cover;
+              @extend %full-height;
               @include screenUp(md) {
                 overflow-y: auto;
+              }
+              .jumbotron-overlay {
+                @extend %full-height;
+                background: rgba(96, 131, 218, .9);
+                background-attachment: fixed;
+                .container-padding {
+                  padding: 3rem 1.5rem;
+                }
               }
             }
           }
@@ -61,6 +72,7 @@ html {
               }
               .navbar {
                 width: 100%;
+                background: #4f70c3;
                 .nav {
                   a {
                     color: white;
@@ -73,7 +85,7 @@ html {
       }
       footer {
         order: 4;
-        background: #000;
+        background: #3b5aa7;
         color: #fff;
         @include flex(center, center, row);
         width: 100%;

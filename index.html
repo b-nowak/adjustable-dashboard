@@ -20,7 +20,7 @@
 
 <body>
   <div class="grid-container" id="pc-data-aggregator">
-    <nav class="navbar navbar-expand-lg  navbar-dark bg-primary" v-bind:class="{'order-3': isChangedPrimary, 'd-none': isHiddenPrimary}">
+    <nav class="navbar navbar-expand-lg  navbar-dark" v-bind:class="{'order-3': isChangedPrimary, 'd-none': isHiddenPrimary}">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo04"
         aria-controls="navbarTogglerDemo04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -44,29 +44,33 @@
     </nav>
     <div class="vertical-split">
       <div class="side left">
-        <div class="jumbotron bg-info text-white radius-0" style="background-image:url(images/bg-harbor.jpg)">
-          <div class="container">
-            <h1 class="display-1 text-light">Key Visual</h1>
-            <span class="lead">This is the Key Visual description that is customisable and RWD&nbsp;-&nbsp;ready.</span>
-            <div class="mt-4">
-              <a href="#!" class="btn btn-success btn-pill btn-wide btn-lg my-2 mr-2">
-                <span>A Button</span>
-              </a>
-              <a href="#!" class="btn btn-primary btn-pill btn-wide btn-lg my-2">
-                <span>Another Button</span>
-              </a>
+        <div class="jumbotron" style="background-image:url(images/jumbo-bg.jpg)">
+          <div class="jumbotron-overlay text-white radius-0">
+            <div class="container">
+              <div class="container-padding">
+                <h1 class="display-1 text-light">Key Visual</h1>
+                <span class="lead">This is the Key Visual description that is customisable and RWD&nbsp;-&nbsp;ready.</span>
+                <div class="mt-4">
+                  <a href="#!" class="btn btn-success btn-pill btn-wide btn-lg my-2 mr-2">
+                    <span>A Button</span>
+                  </a>
+                  <a href="#!" class="btn btn-primary btn-pill btn-wide btn-lg my-2">
+                    <span>Another Button</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="side right">
         <div class="content-area">
-          <nav class="navbar navbar-expand-lg  navbar-dark bg-success" v-bind:class="{'order-2': isChangedSecondary, 'd-none': isHiddenSecondary}">
+          <nav class="navbar navbar-expand-lg  navbar-dark" v-bind:class="{'order-2': isChangedSecondary, 'd-none': isHiddenSecondary}">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
               aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#!">Navbar</a>
+            <a class="navbar-brand" href="#!">Navigation/Pagination bar</a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
               <ul class="navbar-nav mr-auto mt-2 mt-md-0">
                 <li class="nav-item active">
@@ -98,7 +102,7 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
                     </div>
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -137,7 +141,8 @@
                     earum eos, expedita, fuga harum incidunt maxime modi mollitia numquam praesentium sapiente suscipit temporibus
                     ut vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nam nostrum pariatur praesentium
                     tempore. Ad architecto at aut dicta enim, eveniet expedita libero magnam minus, nihil, non sequi sunt
-                    voluptates!</p>
+                    voluptates!
+                  </p>
                 </div>
                 <div class="col-xl-6">
                   <blockquote class="blockquote ">
@@ -172,7 +177,7 @@
             <li>
               <h6>Primary header</h6>
               <hr class="my-2">
-              <button href="#" class="btn btn-warning btn-sm" v-on:click="isHiddenPrimary = !isHiddenPrimary">
+              <button href="#" class="btn btn-warning btn-sm text-white" v-on:click="isHiddenPrimary = !isHiddenPrimary">
                 Show/Hide</button>
               <button href="#" class="btn btn-success btn-sm" v-on:click="isChangedPrimary = !isChangedPrimary" v-bind:class="{'disabled': isHiddenPrimary}"
                 :disabled="isHiddenPrimary">
@@ -181,7 +186,7 @@
             <li class="mt-3">
               <h6>Secondary header</h6>
               <hr class="my-2">
-              <button href="#" class="btn btn-warning btn-sm" v-on:click="isHiddenSecondary = !isHiddenSecondary">
+              <button href="#" class="btn btn-warning btn-sm text-white" v-on:click="isHiddenSecondary = !isHiddenSecondary">
                 Show/Hide</button>
               <button href="#" class="btn btn-success btn-sm" v-on:click="isChangedSecondary = !isChangedSecondary" v-bind:class="{'disabled': isHiddenSecondary}"
                 :disabled="isHiddenSecondary">
@@ -190,7 +195,7 @@
             <li class="mt-3">
               <h6>Footer</h6>
               <hr class="my-2">
-              <button href="#" class="btn btn-warning btn-sm" v-on:click="isHiddenFooter = !isHiddenFooter">
+              <button href="#" class="btn btn-warning btn-sm text-white" v-on:click="isHiddenFooter = !isHiddenFooter">
                 Show/Hide</button>
             </li>
           </ul>
