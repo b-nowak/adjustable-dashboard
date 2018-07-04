@@ -1,188 +1,147 @@
-/* line 2, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html, html body, html body .grid-container, html body .grid-container .vertical-split, html body .grid-container .vertical-split .side, html body .grid-container .vertical-split .side.left .jumbotron, html body .grid-container .vertical-split .side.left .jumbotron .jumbotron-overlay, html body .grid-container .vertical-split .side.right .content-area {
-  width: 100%;
-}
+  width: 100%; }
+  @media only screen and (min-width: 992px) {
+    html, html body, html body .grid-container, html body .grid-container .vertical-split, html body .grid-container .vertical-split .side, html body .grid-container .vertical-split .side.left .jumbotron, html body .grid-container .vertical-split .side.left .jumbotron .jumbotron-overlay, html body .grid-container .vertical-split .side.right .content-area {
+      overflow: hidden;
+      height: 100%; } }
 
-@media only screen and (min-width: 992px) {
-  /* line 2, /Users/bnowak/Desktop/da/scss/polcode.scss */
-  html, html body, html body .grid-container, html body .grid-container .vertical-split, html body .grid-container .vertical-split .side, html body .grid-container .vertical-split .side.left .jumbotron, html body .grid-container .vertical-split .side.left .jumbotron .jumbotron-overlay, html body .grid-container .vertical-split .side.right .content-area {
-    overflow: hidden;
-    height: 100%;
-  }
-}
-
-/* line 10, /Users/bnowak/Desktop/da/scss/polcode.scss */
 html {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  flex-direction: row;
-}
+  flex-direction: row; }
+  html body {
+    height: 100%; }
+    html body .grid-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      html body .grid-container .navbar {
+        width: 100%;
+        background-color: #4160ae; }
+        html body .grid-container .navbar .nav a {
+          color: white; }
+      html body .grid-container .vertical-split {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        order: 2; }
+        @media only screen and (min-width: 992px) {
+          html body .grid-container .vertical-split {
+            display: flex;
+            justify-content: flex-start;
+            align-items: stretch;
+            flex-direction: row; } }
+        html body .grid-container .vertical-split.master-background {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover; }
+          @media only screen and (min-width: 992px) {
+            html body .grid-container .vertical-split.master-background {
+              background-image: url("../images/jumbo-large.jpg"); } }
+        html body .grid-container .vertical-split .side {
+          display: flex;
+          justify-content: flex-start;
+          align-items: stretch;
+          flex-direction: row; }
+          html body .grid-container .vertical-split .side.left .jumbotron {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(../images/jumbo-bg.jpg); }
+            @media only screen and (min-width: 992px) {
+              html body .grid-container .vertical-split .side.left .jumbotron {
+                overflow-y: auto; } }
+            html body .grid-container .vertical-split .side.left .jumbotron .jumbotron-overlay {
+              background-color: rgba(96, 131, 218, 0.9);
+              background-attachment: fixed; }
+              html body .grid-container .vertical-split .side.left .jumbotron .jumbotron-overlay .container-padding {
+                padding: 3rem 1.5rem; }
+          html body .grid-container .vertical-split .side.right .content-area {
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column; }
+            html body .grid-container .vertical-split .side.right .content-area .content-wrap {
+              width: 100%;
+              padding: 3rem 1.5rem; }
+              @media only screen and (min-width: 992px) {
+                html body .grid-container .vertical-split .side.right .content-area .content-wrap {
+                  overflow-y: auto; } }
+            html body .grid-container .vertical-split .side.right .content-area .navbar {
+              width: 100%;
+              background-color: #4f70c3; }
+              html body .grid-container .vertical-split .side.right .content-area .navbar .nav a {
+                color: white; }
+          html body .grid-container .vertical-split .side.right .pagination-bar {
+            width: 100%;
+            background-color: #5476cc;
+            padding: 7px 0; }
+            html body .grid-container .vertical-split .side.right .pagination-bar .steps a {
+              background: #ebebeb;
+              height: 10px;
+              width: 10px;
+              border-radius: 50px;
+              display: block; }
+              html body .grid-container .vertical-split .side.right .pagination-bar .steps a.active, html body .grid-container .vertical-split .side.right .pagination-bar .steps a.visited {
+                background: white; }
+          @media only screen and (min-width: 992px) {
+            html body .grid-container .vertical-split .side .transparent-background {
+              background: none !important; } }
+      html body .grid-container footer {
+        order: 4;
+        background-color: #3b5aa7;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        padding: 5px 0; }
+    html body .customiser {
+      position: fixed;
+      z-index: 99999;
+      right: -250px;
+      top: 0;
+      width: 250px;
+      background-color: #fbfbfb;
+      border: 1px solid #eee; }
+      @media only screen and (min-width: 992px) {
+        html body .customiser {
+          top: 112px; } }
+      html body .customiser.is-toggled {
+        right: 0; }
+      html body .customiser .customiser-wrap {
+        padding: 20px;
+        position: relative; }
+        html body .customiser .customiser-wrap .customiser-body h6 {
+          font-size: 14px; }
+        html body .customiser .customiser-wrap .customiser-body .btn-sm {
+          padding: 2px 7px 2px;
+          font-size: 13px; }
+        html body .customiser .customiser-wrap .customiser-toggle {
+          position: absolute;
+          top: 0;
+          left: -32px;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          background-color: #000;
+          color: 000;
+          padding: 8px;
+          transition: all .2s; }
+          html body .customiser .customiser-wrap .customiser-toggle:hover {
+            opacity: .9; }
+          html body .customiser .customiser-wrap .customiser-toggle i {
+            color: rgba(96, 131, 218, 0.9); }
 
-/* line 13, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body {
-  height: 100%;
-}
-
-/* line 16, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-/* line 19, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container .navbar {
-  width: 100%;
-  background-color: #4160ae;
-}
-
-/* line 23, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container .navbar .nav a {
-  color: white;
-}
-
-/* line 28, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container .vertical-split {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  order: 2;
-}
-
-@media only screen and (min-width: 992px) {
-  /* line 28, /Users/bnowak/Desktop/da/scss/polcode.scss */
-  html body .grid-container .vertical-split {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-direction: row;
-  }
-}
-
-/* line 35, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container .vertical-split .side {
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-direction: row;
-}
-
-/* line 39, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container .vertical-split .side.left .jumbotron {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border-radius: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media only screen and (min-width: 992px) {
-  /* line 39, /Users/bnowak/Desktop/da/scss/polcode.scss */
-  html body .grid-container .vertical-split .side.left .jumbotron {
-    overflow-y: auto;
-  }
-}
-
-/* line 51, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container .vertical-split .side.left .jumbotron .jumbotron-overlay {
-  background-color: rgba(96, 131, 218, 0.9);
-  background-attachment: fixed;
-}
-
-/* line 55, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container .vertical-split .side.left .jumbotron .jumbotron-overlay .container-padding {
-  padding: 3rem 1.5rem;
-}
-
-/* line 62, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container .vertical-split .side.right .content-area {
-  margin: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
-
-/* line 66, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container .vertical-split .side.right .content-area .content-wrap {
-  width: 100%;
-  padding: 3rem 1.5rem;
-}
-
-@media only screen and (min-width: 992px) {
-  /* line 66, /Users/bnowak/Desktop/da/scss/polcode.scss */
-  html body .grid-container .vertical-split .side.right .content-area .content-wrap {
-    overflow-y: auto;
-  }
-}
-
-/* line 73, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container .vertical-split .side.right .content-area .navbar {
-  width: 100%;
-  background-color: #4f70c3;
-}
-
-/* line 77, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container .vertical-split .side.right .content-area .navbar .nav a {
-  color: white;
-}
-
-/* line 86, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .grid-container footer {
-  order: 4;
-  background-color: #3b5aa7;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  padding: 5px 0;
-}
-
-/* line 95, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .customiser {
-  position: fixed;
-  z-index: 99999;
-  right: -250px;
-  top: 112px;
-  width: 250px;
-  background-color: #eee;
-}
-
-/* line 102, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .customiser.is-toggled {
-  right: 0;
-}
-
-/* line 105, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .customiser .customiser-wrap {
-  padding: 20px;
-  position: relative;
-}
-
-/* line 108, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .customiser .customiser-wrap .customiser-toggle {
-  position: absolute;
-  top: 0;
-  left: -32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  background-color: #000;
-  color: 000;
-  padding: 8px;
-}
-
-/* line 116, /Users/bnowak/Desktop/da/scss/polcode.scss */
-html body .customiser .customiser-wrap .customiser-toggle i {
-  color: rgba(96, 131, 218, 0.9);
-}
-
-/*# sourceMappingURL=../css/polcode.map */
+/*# sourceMappingURL=polcode.css.map */

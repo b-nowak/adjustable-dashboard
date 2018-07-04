@@ -42,21 +42,20 @@
         </ul>
       </div>
     </nav>
-    <div class="vertical-split">
-      <div class="side left">
-        <div class="jumbotron" style="background-image:url(images/jumbo-bg.jpg)">
-          <div class="jumbotron-overlay text-white radius-0" :style="{ 'background-color': color }">
+    <div class="vertical-split" v-bind:class="{'master-background': hasMasterBackground}">
+      <div class="side left" :style="{ flex: leftSize }">
+        <div class="jumbotron" v-bind:class="{'transparent-background': hasMasterBackground}">
+          <div class="jumbotron-overlay text-white radius-0" :style="{ 'background-color': color }" v-bind:class="{'transparent-background': hasMasterBackground}">
             <div class="container">
               <div class="container-padding">
                 <h1 class="display-1 text-light">Key Visual</h1>
                 <p class="lead text-justify">This is the Key Visual description that is customisable and RWD&nbsp;-&nbsp;ready.</p>
-                <p class="small text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sapiente dolor ut consequatur rerum velit temporibus fugiat, perspiciatis omnis provident, consectetur quam voluptates officiis quasi repellat quod qui. Vero, natus est sapiente dolor ut consequatur rerum velit temporibus fugiat? </p>
+                <p class="small text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sapiente dolor ut consequatur rerum velit temporibus
+                  fugiat, perspiciatis omnis provident, consectetur quam voluptates officiis quasi repellat quod qui. Vero,
+                  natus est sapiente dolor ut consequatur rerum velit temporibus fugiat? </p>
                 <div class="mt-4">
-                  <a href="#!" class="btn btn-success btn-pill btn-wide btn-lg my-2 mr-2">
-                    <span>A Button</span>
-                  </a>
-                  <a href="#!" class="btn btn-primary btn-pill btn-wide btn-lg my-2">
-                    <span>Another Button</span>
+                  <a href="#!" class="btn btn-success btn-pill btn-wide btn-lg my-2 mr-2" data-toggle="modal" data-target="#exampleModal">
+                    <span>Toggle modal</span>
                   </a>
                 </div>
               </div>
@@ -64,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div class="side right">
+      <div class="side right" :style="{ flex: rightSize }">
         <div class="content-area">
           <nav class="navbar navbar-expand-lg  navbar-dark" v-bind:class="{'order-2': isChangedSecondary, 'd-none': isHiddenSecondary}"
             :style="{ 'background-color': color }">
@@ -113,10 +112,7 @@
                     <div class="d-flex align-items-center justify-content-end">
                       <button type="submit" class="btn btn-success btn-pill mt-3 btn-wide btn-lg">Submit</button>
                     </div>
-
                   </form>
-
-
                   <h5 class="mt-5">Typography</h5>
                   <hr>
                   <p class="lead">
@@ -156,14 +152,30 @@
                 <div class="col-xl-6">
                   <blockquote class="blockquote blockquote-reverse">
                     <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                    <footer class="blockquote-footer">Someone famous in
-                      <cite title="Source Title">Source Title</cite>
+                    <footer class="blockquote-footer">Someone famous in 
+                      <cite title="Source Title">&nbsp;Source Title</cite>
                     </footer>
                   </blockquote>
                 </div>
               </div>
             </div>
           </div>
+          <nav class="pagination-bar" v-bind:class="{'order-2': isChangedPagination, 'd-none': isHiddenPagination}" :style="{ 'background-color': color }">
+            <ul class="d-flex list-unstyled pagination align-items-center justify-content-center w-100 m-0 steps">
+              <li>
+                <a class="step-1 mx-2 visited active" href="#">
+                </a>
+              </li>
+              <li>
+                <a class="step-2 mx-2" href="#">
+                </a>
+              </li>
+              <li>
+                <a class="step-2 mx-2" href="#">
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
@@ -173,7 +185,7 @@
         <a class="customiser-toggle" v-on:click="isToggled = !isToggled">
           <i class="fas fa-cog fa-spin" :style="{ 'color': color }"></i>
         </a>
-        <div class="customiser-head mb-4">
+        <div class="customiser-head mb-3">
           <h4>Customise theme</h4>
         </div>
         <div class="customiser-body">
@@ -181,7 +193,7 @@
             <li>
               <h6>Primary header</h6>
               <hr class="my-2">
-              <button href="#" class="btn btn-warning btn-sm text-white" v-on:click="isHiddenPrimary = !isHiddenPrimary">
+              <button href="#" class="btn btn-info btn-sm text-white" v-on:click="isHiddenPrimary = !isHiddenPrimary">
                 Show/Hide</button>
               <button href="#" class="btn btn-success btn-sm" v-on:click="isChangedPrimary = !isChangedPrimary" v-bind:class="{'disabled': isHiddenPrimary}"
                 :disabled="isHiddenPrimary">
@@ -190,18 +202,29 @@
             <li class="mt-3">
               <h6>Secondary header</h6>
               <hr class="my-2">
-              <button href="#" class="btn btn-warning btn-sm text-white" v-on:click="isHiddenSecondary = !isHiddenSecondary">
+              <button href="#" class="btn btn-info btn-sm text-white" v-on:click="isHiddenSecondary = !isHiddenSecondary">
                 Show/Hide</button>
               <button href="#" class="btn btn-success btn-sm" v-on:click="isChangedSecondary = !isChangedSecondary" v-bind:class="{'disabled': isHiddenSecondary}"
                 :disabled="isHiddenSecondary">
                 Swap position</button>
             </li>
             <li class="mt-3">
-              <h6>Footer</h6>
-              <hr class="my-2">
-              <button href="#" class="btn btn-warning btn-sm text-white" v-on:click="isHiddenFooter = !isHiddenFooter">
-                Show/Hide</button>
+              <div class="row">
+                <div class="col-md-6">
+                  <h6>Pagination</h6>
+                  <hr class="my-2">
+                  <button href="#" class="btn btn-info btn-sm text-white" v-on:click="isHiddenPagination = !isHiddenPagination">
+                    Show/Hide</button>
+                </div>
+                <div class="col-md-6">
+                  <h6>Footer</h6>
+                  <hr class="my-2">
+                  <button href="#" class="btn btn-info btn-sm text-white" v-on:click="isHiddenFooter = !isHiddenFooter">
+                    Show/Hide</button>
+                </div>
+              </div>
             </li>
+
             <li class="mt-3">
               <h6>Color Palette</h6>
               <hr class="my-2">
@@ -211,14 +234,66 @@
                 Green</button>
               <button href="#" class="btn btn-sm text-white" style="background-color:rgba(255, 186, 64, 0.9)" v-on:click="color = 'rgba(255, 186, 64, 0.9)'">
                 Yellow</button>
-              <button href="#" class="btn btn-sm text-white mt-1" style="background-color:rgba(73, 132, 243, 0.9)" v-on:click="color = ''">
+              <button href="#" class="btn btn-sm text-white" style="background-color:rgba(73, 132, 243, 0.9)" v-on:click="color = ''">
                 Blue</button>
+            </li>
+            <li class="mt-3">
+              <h6>Sizing</h6>
+              <hr class="my-2">
+              <div class="d-flex">
+                <div class="left-sizer-container">
+                  <small class="d-block">Left Side</small>
+                  <button href="#" class="btn btn-sm text-white btn-info" v-on:click="leftSize = leftSize + 1" :disabled="leftSize == 3">
+                    +</button>
+                  <button href="#" class="btn btn-sm text-white btn-info" v-on:click="leftSize = leftSize - 1" :disabled="leftSize == 1">
+                    -</button>
+                </div>
+                <div class="right-sizer-container ml-3">
+                  <small class="d-block">Right Side</small>
+                  <button href="#" class="btn btn-sm text-white btn-info" v-on:click="rightSize = rightSize + 1" :disabled="rightSize == 3">
+                    + </button>
+                  <button href="#" class="btn btn-sm text-white btn-info" v-on:click="rightSize = rightSize - 1" :disabled="rightSize == 1">
+                    - </button>
+                </div>
+                <div class="reset-sizer-container ml-3">
+                  <small class="d-block">Default</small>
+                  <button href="#" class="btn btn-sm text-white btn-info" v-on:click="rightSize = 1, leftSize = 1">
+                    Reset</button>
+                </div>
+              </div>
+            </li>
+            <li class="mt-3">
+              <h6>Background type</h6>
+              <hr class="my-2">
+              <button href="#" class="btn btn-sm text-white btn-info" v-on:click="hasMasterBackground = !hasMasterBackground">
+                Change type</button>
+              <small class="d-block">Does not change mobile</small>
             </li>
           </ul>
         </div>
       </div>
     </div>
     <footer v-bind:class="{'d-none': isHiddenFooter}" :style="{ 'background-color': color }">I'm a footer 2018</footer>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            Consectetur adipisicing elit. Ad, cumque delectus deleniti dolor esse ex fugiat, id in ipsum modi molestiae mollitia, nulla numquam provident quasi soluta sunt tempora vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aspernatur consequuntur cumque dolor ducimus earum eos, expedita, fuga harum incidunt maxime modi mollitia numquam praesentium sapiente suscipit temporibus ut vero. Emphasis text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nam nostrum pariatur praesentium tempore. Ad architecto at aut dicta enim, eveniet expedita libero magnam minus, nihil, non sequi sunt voluptates! 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-wide btn-pill" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

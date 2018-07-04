@@ -4,10 +4,15 @@ var app = new Vue({
   data: {
     isToggled: false,
     isChangedPrimary: false,
-    isHiddenPrimary: true,
+    isHiddenPrimary: false,
+    isHiddenPagination: true,
+    isChangedPagination: false,
     isChangedSecondary: false,
     isHiddenSecondary: true,
-    isHiddenFooter: true,
-    color: ''
+    isHiddenFooter: false,
+    color: '',
+    leftSize: 1,
+    rightSize: 1,
+    hasMasterBackground: false
   }
 })

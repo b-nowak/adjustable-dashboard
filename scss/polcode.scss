@@ -32,9 +32,19 @@ html {
         @include screenUp(md) {
           @include flex(flex-start, stretch, row);
         }
+        &.master-background {
+          @include screenUp(md) {
+            background-image: url("../images/jumbo-large.jpg");
+          }
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
         .side {
           @extend %full-height;
-          @include flex(flex-start, stretch, row);
+          @include flex(flex-start,
+          stretch,
+          row);
           &.left {
             .jumbotron {
               width: 100%;
@@ -44,6 +54,7 @@ html {
               background-position: center;
               background-repeat: no-repeat;
               background-size: cover;
+              background-image: url(../images/jumbo-bg.jpg);
               @extend %full-height;
               @include screenUp(md) {
                 overflow-y: auto;
@@ -62,7 +73,9 @@ html {
             .content-area {
               margin: 0;
               @extend %full-height;
-              @include flex(flex-start, center, column);
+              @include flex(flex-start,
+              center,
+              column);
               .content-wrap {
                 width: 100%;
                 padding: 3rem 1.5rem;
@@ -80,6 +93,29 @@ html {
                 }
               }
             }
+            .pagination-bar {
+              width: 100%;
+              background-color: #5476cc;
+              padding: 7px 0;
+              .steps {
+                a {
+                  background: rgb(235, 235, 235);
+                  height: 10px;
+                  width: 10px;
+                  border-radius: 50px;
+                  display: block;
+                  &.active,
+                  &.visited {
+                    background: white;
+                  }
+                }
+              }
+            }
+          }
+          .transparent-background {
+            @include screenUp(md) {
+              background: none !important;
+            }
           }
         }
       }
@@ -87,7 +123,9 @@ html {
         order: 4;
         background-color: #3b5aa7;
         color: #fff;
-        @include flex(center, center, row);
+        @include flex(center,
+        center,
+        row);
         width: 100%;
         padding: 5px 0;
       }
@@ -96,23 +134,43 @@ html {
       position: fixed;
       z-index: 99999;
       right: -250px;
-      top: 112px;
+      top: 0;
+      @include screenUp(md) {
+        top: 112px;
+      }
       width: 250px;
-      background-color: #eee;
+      background-color: #fbfbfb;
+      border: 1px solid #eee;
       &.is-toggled {
         right: 0;
       }
       .customiser-wrap {
-        padding: 20px; 
+        padding: 20px;
         position: relative;
+        .customiser-body {
+          h6 {
+            font-size: 14px;
+          }
+          .btn-sm {
+            padding: 2px 7px 2px;
+            font-size: 13px;
+          }
+        }
         .customiser-toggle {
           position: absolute;
           top: 0;
           left: -32px;
-          @include flex(center, center, row);
+          cursor: pointer;
+          @include flex(center,
+          center,
+          row);
           background-color: #000;
           color: 000;
           padding: 8px;
+          transition: all .2s;
+          &:hover {
+            opacity: .9;
+          }
           i {
             color: rgba(96, 131, 218, 0.9);
           }
